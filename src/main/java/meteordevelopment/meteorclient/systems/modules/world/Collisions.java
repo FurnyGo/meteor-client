@@ -111,8 +111,16 @@ public class Collisions extends Module {
             || block instanceof HoneyBlock
         );
     }
+    
+    @EventHandler
+    private void onTick(TickEvent.Post event) {
+        if (ignoreBorder.get() && MixinPlugin.isLithiumPresent) {
+            error("Lithium breaks border collisions");
+            ignoreBorder.set(false);
+        }
+    }
 
     public boolean ignoreBorder() {
-        return  isActive() && ignoreBorder.get();
+        return isActive() && ignoreBorder.get();
     }
 }
