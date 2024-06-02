@@ -26,7 +26,7 @@ public class MixinPlugin implements IMixinConfigPlugin {
     private static boolean isIndigoPresent;
     public static boolean isSodiumPresent;
     private static boolean isCanvasPresent;
-    private static boolean isLithiumPresent;
+    public static boolean isLithiumPresent;
     public static boolean isIrisPresent;
     private static boolean isIndiumPresent;
     private static boolean isVFPPresent;
